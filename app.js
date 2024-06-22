@@ -29,13 +29,15 @@ function mainSite() {
 }
 
 nextBtn.addEventListener("click", function() {
-    loading.style.setProperty("transform", "translateX(0)")
     setTimeout(() => {
-        mainSite()
+        loading.style.setProperty("transform", "translateX(0)")
         setTimeout(() => {
-            loading.style.setProperty("transform", "translateX(-100%)")
-        }, 200)
-    }, 800)
+            mainSite()
+            setTimeout(() => {
+                loading.style.setProperty("transform", "translateX(-100%)")
+            }, 200)
+        }, 800)
+    }, 200);
    
 })
 

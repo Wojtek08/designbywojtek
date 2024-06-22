@@ -145,11 +145,6 @@ header #navbar ul li:hover::after {
     font-size: 25px;
 }
 
-#media li a {
-    user-select: none;
-    -webkit-tap-highlight-color: transparent;
-}
-
 header ul#media li:after {
     display: none;
     
