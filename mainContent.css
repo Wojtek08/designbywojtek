@@ -58,6 +58,7 @@ header .both {
     gap: 2.5px;
     position: relative;
     cursor: pointer;
+    user-select: none;
 }
 
 #menu-btn div {
@@ -178,7 +179,7 @@ header ul#media li:after {
     }
 
     #menu-btn div:last-of-type {
-        bottom: 28%%;
+        bottom: 28%;
     }
 
     #media {
