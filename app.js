@@ -25,6 +25,7 @@ function mainSite() {
     let mainContent2 = document.getElementById("main2");
     mainContent2.style.setProperty("display", "flex");
     menuBtn.style.setProperty("display", "flex")
+    // document.querySelector(".body1").classList.add("body");
 }
 
 nextBtn.addEventListener("click", function() {

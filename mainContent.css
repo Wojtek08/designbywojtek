@@ -59,6 +59,7 @@ header .both {
     position: relative;
     cursor: pointer;
     user-select: none;
+    -webkit-tap-highlight-color: transparent;
 }
 
 #menu-btn div {

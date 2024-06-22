@@ -250,6 +250,8 @@ header h1 {
     font-size: 0.8rem;
     position: relative;
     z-index: -10;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
 }
 
 #welcome-cont div:last-of-type::before {
