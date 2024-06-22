@@ -103,6 +103,7 @@ header #navbar ul li:not(#media li) {
     width: fit-content;
     user-select: none;
     -webkit-tap-highlight-color: transparent;
+    font-family: DM Serif Display, sans-serif;
 }
 
 header #navbar ul li::after {
