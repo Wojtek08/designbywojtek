@@ -92,6 +92,8 @@ header #navbar ul:not(#media) {
 header #navbar a {
     color: white;
     transform: translateY(2px);
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
 }
 
 header #navbar ul li:not(#media li) {
@@ -141,6 +143,11 @@ header #navbar ul li:hover::after {
 
 #media li i {
     font-size: 25px;
+}
+
+#media li a {
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
 }
 
 header ul#media li:after {
