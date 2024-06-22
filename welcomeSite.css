@@ -244,6 +244,7 @@ header h1 {
     position: relative;
     z-index: -10;
     user-select: none;
+    overflow: hidden;
     -webkit-tap-highlight-color: transparent;
 }
 
@@ -257,8 +258,7 @@ header h1 {
     height: 100%;
     left: 0;
     bottom: 1px;
-    border-radius: 10px;
-    transition: 0.2s ease;
+    transition: 0.3s ease;
     z-index: -5;
     transform-origin: 0%;
 }
