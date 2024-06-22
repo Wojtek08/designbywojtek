@@ -257,7 +257,7 @@ header h1 {
     position: absolute;
     height: 120%;
     left: 0;
-    bottom: 1px;
+    bottom: -5px;
     transition: 0.3s ease;
     z-index: -5;
     transform-origin: 0%;
