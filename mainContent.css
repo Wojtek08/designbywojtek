@@ -1,5 +1,6 @@
 header {
-    z-index: 110;
+    /* z-index: 150; */
+    /* position: inherit */
 }
 
 header .both {
@@ -47,7 +48,7 @@ header .both {
     justify-content: space-evenly
 }
 
-#menu-btn {
+#menu-btn.norm {
     border-radius: 50%;
     width: 40px;
     height: 40px;
@@ -56,13 +57,14 @@ header .both {
     flex-direction: column;
     background-color: #875053;
     gap: 2.5px;
+    display: flex;
     position: relative;
     cursor: pointer;
     user-select: none;
     -webkit-tap-highlight-color: transparent;
 }
 
-#menu-btn div {
+#menu-btn.norm div {
     background-color: white;
     width: 55%;
     height: 4px;
@@ -70,12 +72,12 @@ header .both {
     transition: 0.2s ease;
 }
 
-#menu-btn div:first-of-type {
+#menu-btn.norm div:first-of-type {
     position: absolute;
     top: 29%;
 }
 
-#menu-btn div:last-of-type {
+#menu-btn.norm div:last-of-type {
     position: absolute;
     bottom: 30%;
 }
@@ -106,7 +108,7 @@ header #navbar ul li:not(#media li) {
     font-family: DM Serif Display, sans-serif;
 }
 
-header #navbar ul li::after {
+header #navbar ul li:not(#media li)::after {
     transform: scaleX(0.5);
     display: block;
     background-color: white;
@@ -118,6 +120,7 @@ header #navbar ul li::after {
 
 header #navbar ul li:hover::after {
     transform: scaleX(1);
+    background-color: #C76652;
 }
 
 #media {
@@ -131,7 +134,7 @@ header #navbar ul li:hover::after {
 #media li {
     background-color: #D9D9D9;
     border-radius: 50%;
-    list-style-type: none;;
+    list-style-type: none;
     width: 40px;
     height: 40px;
     display: flex;
@@ -140,27 +143,62 @@ header #navbar ul li:hover::after {
     box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.25);
     user-select: none;
     -webkit-tap-highlight-color: transparent;
+    transition: 0.2s ease;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+#media li::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: -10;
+    height: 100%;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: 0.2s ease;
+}
+
+#media li:first-of-type::after {
+    background-color: rgba(254, 218, 119, 1);
+    background-image: linear-gradient(38deg, rgba(254, 218, 119, 1) 6%, rgba(245, 133, 41, 1) 23%, rgba(221, 42, 123, 1) 38%, rgba(129, 52, 175, 1) 74%, rgba(81, 91, 212, 1) 100%);
+}
+
+#media li:last-of-type::after {
+    background-color: rgba(255, 255, 255, 1);
+    background-image: linear-gradient(44deg, rgba(255, 255, 255, 1) 0%, rgba(55, 142, 255, 1) 50%, rgba(0, 39, 255, 1) 100%);
 }
 
 #media li i {
     font-size: 25px;
+    transition: 0.2s ease;
 }
 
-header ul#media li:after {
-    display: none;
-    
+#media li a {
+    color: rgb(88, 88, 88)
 }
 
-#menu-btn.open div:nth-of-type(2) {
+#media li:hover::after {
+    transform: scale(1.2);
+}
+
+#media li:hover a {
+    color: white;
+}
+
+#menu-btn.open.norm div:nth-of-type(2) {
     transform: scale(0);
 }
 
-#menu-btn.open div:nth-of-type(1) {
+#menu-btn.open.norm div:nth-of-type(1) {
     top: 50%;
     transform: translateY(-50%) rotate(35deg);
 }
 
-#menu-btn.open div:nth-of-type(3) {
+#menu-btn.open.norm div:nth-of-type(3) {
     bottom: 50%;
     transform: translateY(50%) rotate(-35deg);
 }
@@ -171,7 +209,7 @@ header ul#media li:after {
     left: -100%;
     width: 100vw;
     height: 100vh;
-    z-index: 90;
+    z-index: 100;
     background-color: #a69080c5;
 }
 
@@ -180,13 +218,13 @@ header ul#media li:after {
         top: 80px;
     }
 
-    #menu-btn {
+    #menu-btn.norm {
         transform: scale(1.4);
         /* width: 60px;
         height: 60px; */
     }
 
-    #menu-btn div:last-of-type {
+    #menu-btn.norm div:last-of-type {
         bottom: 28%;
     }
 
@@ -196,5 +234,52 @@ header ul#media li:after {
 
     #media li {
         transform: scale(1.3);
+    }
+}
+
+@media only screen and (min-width: 1100px) {
+    header {
+        background-color: hsl(29, 29%, 54%, 0.5);
+    }
+
+    header .both.open {
+        background-color: hsl(29, 29%, 54%, 0.5)
+    }
+
+    #box {
+        display: none;
+    }
+
+    header #menu-btn.norm {
+        display: none;
+    }
+
+    header #navbar {
+        display: flex;
+        position: static;
+        transform: translateX(0);
+        background-color: #00000000;
+        box-shadow: none;
+        width: fit-content;
+        padding: 0px;
+        max-width: none;
+    }
+
+    header #navbar ul:not(#media) {
+        justify-content: space-between;
+        flex-direction: row;
+    }
+
+    #media {
+        min-width: 120px;
+        margin-left: 40px;
+    }
+
+    header #navbar ul li:not(#media li) {
+        white-space: nowrap;
+    }
+
+    .both {
+        max-width: 1100px;
     }
 }

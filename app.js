@@ -4,12 +4,12 @@ let menuBtn = document.getElementById("menu-btn");
 let menu = document.getElementById("navbar");
 
 menuBtn.addEventListener("click", function() {
-    if(menuBtn.className == "open") {
-        menuBtn.className = "";
+    if(menuBtn.className == "norm open") {
+        menuBtn.className = "norm";
         menu.className = "";
         document.querySelector("header section").classList.remove("open");
     } else {
-        menuBtn.className = "open";
+        menuBtn.className = "norm open";
         menu.className = "open";
         document.querySelector("header section").classList.add("open");
     }
@@ -22,9 +22,11 @@ function mainSite() {
     mainContent.style.setProperty("display", "none");
     mainContent.remove()
 
+    menu.classList.add("norm")
     let mainContent2 = document.getElementById("main2");
     mainContent2.style.setProperty("display", "flex");
-    menuBtn.style.setProperty("display", "flex")
+    menuBtn.classList.add("norm")
+
     document.querySelector(".body1").classList.add("open");
 }
 
