@@ -12,7 +12,8 @@
     --color4: #613228;
     --color5: #784CAD;
     --color6: #311F47;
-    --next-colot: #4B3AA6;
+    --next-color: #4B3AA6;
+    scroll-behavior: smooth;
 }
 
 
@@ -24,10 +25,6 @@ body {
     margin: 0px;
     padding: 0px;
     background-color: var(--background-color);
-}
-
-#container {
-    height: 2000px;
 }
 
 #loading {
@@ -42,10 +39,6 @@ body {
     opacity: 1;
     transition: 0.5s ease;
 }
-
-/* #loading {
-    left: -100%
-} */
 
 @keyframes loading {
     from {left: 0}
@@ -64,7 +57,7 @@ header {
     z-index: 150;
     height: fit-content;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    background-color: hsl(29, 29%, 54%, 0.5)
+    background-color: hsl(29, 29%, 54%)
 }
 
 header .both {
@@ -85,7 +78,7 @@ header .by {
     font-size: 0.8rem;
 }
 
-header #navbar {
+header #navbar.closed {
     display: none;
 }
 
@@ -114,14 +107,14 @@ header h1 {
     width: 100%;
     max-width: 700px;
     position: relative;
-    height: 100vh;
+    height: calc(100vh - 77px);
     margin: 0px auto;
 }
 
 #div-1 {
     position: absolute;
     width: 65px;
-    height: 250px;
+    height: 300px;
     z-index: -20;
     background-color: rgba(73, 106, 75, 1);
     background-image: linear-gradient(180deg, rgba(73, 106, 75, 1) 0%, rgba(143, 208, 147, 1) 100%);
@@ -193,7 +186,7 @@ header h1 {
     width: 100%;
     height: fit-content;
     position: absolute;
-    top: 45%;
+    top: 40%;
     transform: translateY(-50%);
     font-family: Josefin Sans, sans-serif;
     font-weight: 400;
@@ -231,7 +224,7 @@ header h1 {
 }
 
 #welcome-cont div:last-of-type {
-    background-color: var(--next-colot);
+    background-color: var(--next-color);
     width: 165px;
     padding: 7px 10px;
     transition: 0.2s ease;
@@ -306,6 +299,10 @@ header h1 {
     width: 100vw;
 }
 
+#main2 {
+    display: none;
+}
+
 @media only screen and (min-width: 480px) {
     #welcome-cont div:first-of-type p {
         font-size: 1.2rem;
@@ -322,6 +319,7 @@ header h1 {
     #div-1 {
         left: 70px;
         width: 80px;
+        height: 450px;
     }
 
     #div-2 {
@@ -342,10 +340,6 @@ header h1 {
 
     #welcome-cont div:last-of-type:hover {
         width: 250px;
-    }
-
-    #div-1 {
-        height: 300px
     }
 }
 
@@ -369,6 +363,10 @@ header h1 {
     #div-3 {
         height: 40%;
         width: 100px;
+    }
+    
+    .main-cont {
+        height: calc(100vh - 88px)
     }
 }
 

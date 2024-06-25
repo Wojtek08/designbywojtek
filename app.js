@@ -2,6 +2,7 @@ let nextBtn = document.getElementById("next-button");
 let loading = document.getElementById("loading");
 let menuBtn = document.getElementById("menu-btn");
 let menu = document.getElementById("navbar");
+let main2 = document.getElementById("main2");
 
 menuBtn.addEventListener("click", function() {
     if(menuBtn.className == "norm open") {
@@ -23,11 +24,11 @@ function mainSite() {
     mainContent.remove()
 
     menu.classList.add("norm")
-    let mainContent2 = document.getElementById("main2");
-    mainContent2.style.setProperty("display", "flex");
     menuBtn.classList.add("norm")
 
     document.querySelector(".body1").classList.add("open");
+    menu.classList.remove("closed")
+    main2.classList.add("open")
 }
 
 nextBtn.addEventListener("click", function() {
