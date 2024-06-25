@@ -247,7 +247,7 @@ header #navbar ul li:not(#media li):hover::after {
 
 #main2-cont {
     width: 100vw;
-    height: calc(100vh - 77px);
+    height: calc(100vh - 120px);
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
