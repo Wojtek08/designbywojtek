@@ -266,6 +266,10 @@ header #navbar ul li:not(#media li):hover::after {
     justify-content: space-between;
 }
 
+#choose a {
+    /* width: fit-content; */
+}
+
 #choose div:not(#back-elements2 div) {
     margin-right: auto;
     background-color: #865D36;
@@ -298,6 +302,7 @@ header #navbar ul li:not(#media li):hover::after {
     transform: scaleX(0);
     transform-origin: 0%;
     transition: 0.2s ease;
+    opacity: 0.7;
 }
 
 #choose div:not(#back-elements2 div) div:hover {
@@ -315,7 +320,7 @@ header #navbar ul li:not(#media li):hover::after {
 }
 
 #choose div:not(#back-elements2 div) div p {
-    color: #390E2A;
+    color: #FFFFFF;
     font-family: Josefin Sans;
     position: relative;
     margin: 0px;
@@ -327,12 +332,34 @@ header #navbar ul li:not(#media li):hover::after {
     transition: 0.2s ease;
 }
 
+#choose div:not(#back-elements2 div) div {
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-position-x: center;
+    background-size: cover;
+    border: 3px solid white;
+}
+
+#choose div:not(#back-elements2 div)#projects div {
+    background-image: url(dupa.png);
+    background-position-y: 70%;
+}
+
+#choose div:not(#back-elements2 div)#about-me div {
+    background-image: url(ngc7000.jpg);
+    background-position-y: 75%;
+}
+
+#choose div:not(#back-elements2 div)#projects div {
+    /* background-image: url(); */
+}
+
 #choose div:not(#back-elements2 div) div i {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
-    color: #B7B7B7;
+    color: rgb(183, 183, 183, 0.5);
     z-index: 120;
     font-size: 3rem;
     transition: 0.2s ease;
@@ -504,6 +531,15 @@ header #navbar ul li:not(#media li):hover::after {
     #main2 #choose #about-me div {
         right: auto;
     }
+
+    #choose div:not(#back-elements2 div)#projects div {
+        background-position-y: center;
+    }
+
+    #choose div:not(#back-elements2 div)#about-me div {
+        background-position-y: center;
+    }
+    
 }
 
 @media only screen and (min-width: 1100px) {
