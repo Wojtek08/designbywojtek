@@ -267,10 +267,6 @@ header #navbar ul li:not(#media li):hover::after {
     justify-content: space-between;
 }
 
-#choose a {
-    /* width: fit-content; */
-}
-
 #choose div:not(#back-elements2 div) {
     padding: 15px 0px;
     width: fit-content;
@@ -281,9 +277,9 @@ header #navbar ul li:not(#media li):hover::after {
     background-color: #D9D9D9;
     position: relative;
     left: 10%;
-    width: 65%;
+    width: 70%;
     border-radius: 25px;
-    padding: 30px 0px;
+    padding: 40px 0px;
     transition: 0.2s ease;
     z-index: 130;
     overflow: hidden;
