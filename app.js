@@ -3,6 +3,7 @@ let loading = document.getElementById("loading");
 let menuBtn = document.getElementById("menu-btn");
 let menu = document.getElementById("navbar");
 let main2 = document.getElementById("main2");
+let box = document.getElementById("box");
 
 menuBtn.addEventListener("click", function() {
     if(menuBtn.className == "norm open") {
@@ -13,6 +14,14 @@ menuBtn.addEventListener("click", function() {
         menuBtn.className = "norm open";
         menu.className = "open";
         document.querySelector("header section").classList.add("open");
+    }
+})
+
+box.addEventListener("click", function() {
+    if(menuBtn.className == "norm open") {
+        menuBtn.className = "norm";
+        menu.className = "";
+        document.querySelector("header section").classList.remove("open");
     }
 })
 

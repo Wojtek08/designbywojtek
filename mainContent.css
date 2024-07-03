@@ -5,6 +5,7 @@ header {
 
 header .both {
     transition: 0.2s ease;
+    background-color: #0069aa;
 }
 
 header h1 {
@@ -12,7 +13,7 @@ header h1 {
 }
 
 header .both.open {
-    background-color: #865D36;
+    background-color: #0098dc;
 }
 
 header .both.open + #box {
@@ -27,7 +28,7 @@ header #navbar {
     display: flex;
     position: fixed;
     top: 70px;
-    background-color: #865D36;
+    background-color: #0098dc;
     padding: 20px 20px 40px;
     right: 0;
     width: 65%;
@@ -271,17 +272,16 @@ header #navbar ul li:not(#media li):hover::after {
 }
 
 #choose div:not(#back-elements2 div) {
-    margin-right: auto;
-    background-color: #865D36;
     padding: 15px 0px;
-    width: 50%
+    width: fit-content;
+    width: 100%;
 }
 
 #choose div:not(#back-elements2 div) div {
     background-color: #D9D9D9;
     position: relative;
-    left: 40%;
-    width: 110%;
+    left: 10%;
+    width: 65%;
     border-radius: 25px;
     padding: 30px 0px;
     transition: 0.2s ease;
@@ -380,12 +380,12 @@ header #navbar ul li:not(#media li):hover::after {
 
 #main2 #choose #about-me {
     margin-right: 0px;
-    margin-left: auto;
 }
 
 #main2 #choose #about-me div {
-    right: 40%;
+    right: 10%;
     left: auto;
+    width: 65%;
 }
 
 #main2 #choose #about-me div::after {
