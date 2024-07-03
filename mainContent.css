@@ -106,11 +106,12 @@ header #navbar ul li:not(#media li) {
     width: fit-content;
     user-select: none;
     -webkit-tap-highlight-color: transparent;
-    font-family: DM Serif Display, sans-serif;
+    font-family: Outfit, sans-serif;
+    font-size: 1.3rem;
 }
 
 header #navbar ul li:not(#media li)::after {
-    transform: scaleX(0.5);
+    transform: scaleX(0);
     display: block;
     background-color: white;
     width: 100%;
@@ -121,7 +122,6 @@ header #navbar ul li:not(#media li)::after {
 
 header #navbar ul li:not(#media li):hover::after {
     transform: scaleX(1);
-    background-color: #C76652;
 }
 
 #media {
@@ -573,7 +573,7 @@ header #navbar ul li:not(#media li):hover::after {
 
     header #navbar ul li:not(#media li) {
         white-space: nowrap;
-        font-size: 1.3rem;
+        font-size: 1.5rem;
     }
 
     .both {
