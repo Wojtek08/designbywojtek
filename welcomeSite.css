@@ -225,7 +225,8 @@ header h1 {
 
 #welcome-cont div:last-of-type {
     background-color: var(--next-color);
-    width: 167px;
+    width: 165px;
+    white-space: nowrap;
     padding: 7px 10px;
     transition: 0.2s ease;
     margin-top: 10px;
