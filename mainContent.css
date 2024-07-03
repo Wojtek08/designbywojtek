@@ -383,9 +383,8 @@ header #navbar ul li:not(#media li):hover::after {
 }
 
 #main2 #choose #about-me div {
-    right: 10%;
-    left: auto;
-    width: 65%;
+    /* right: 10%; */
+    left: 25%;
 }
 
 #main2 #choose #about-me div::after {
@@ -529,7 +528,7 @@ header #navbar ul li:not(#media li):hover::after {
     }
 
     #main2 #choose #about-me div {
-        right: auto;
+        left: auto;
     }
 
     #choose div:not(#back-elements2 div)#projects div {
@@ -587,6 +586,7 @@ header #navbar ul li:not(#media li):hover::after {
 
     #main2-cont {
         max-width: 1200px;
+        padding: 0px 30px;
     }
 
     #choose div:not(#back-elements2 div) {
