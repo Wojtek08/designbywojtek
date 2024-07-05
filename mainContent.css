@@ -8,6 +8,24 @@ header .both {
     background-color: #0069aa;
 }
 
+header .both.scrolled {
+    background-color: #00000000;
+    min-height: 0px;
+}
+
+header .both.scrolled #navbar {
+    top: 50px
+}
+
+header.scrolled {
+    background-color: #00000000;
+    box-shadow: none;
+}
+
+header.scrolled h1 {
+    margin: 15px 0px 15px;
+}
+
 header h1 {
     transition: 0.2s ease;
 }
@@ -47,6 +65,11 @@ header #navbar.open {
 
 header .both {
     justify-content: space-evenly
+}
+
+.body1.open header .both {
+    justify-content: space-between;
+    padding: 0px 10%;
 }
 
 #menu-btn.norm {
@@ -248,7 +271,7 @@ header #navbar ul li:not(#media li):hover::after {
 
 #main2-cont {
     width: 100vw;
-    height: calc(100vh - 120px);
+    height: calc(100vh - 70px);
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -265,6 +288,7 @@ header #navbar ul li:not(#media li):hover::after {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    overflow: hidden;
 }
 
 #choose div:not(#back-elements2 div) {
@@ -280,7 +304,7 @@ header #navbar ul li:not(#media li):hover::after {
     width: 70%;
     border-radius: 25px;
     padding: 40px 0px;
-    transition: 0.2s ease;
+    transition: 0.4s ease;
     z-index: 130;
     overflow: hidden;
 }
@@ -346,7 +370,7 @@ header #navbar ul li:not(#media li):hover::after {
     background-position-y: 75%;
 }
 
-#choose div:not(#back-elements2 div)#projects div {
+#choose div:not(#back-elements2 div)#contact div {
     /* background-image: url(); */
 }
 
@@ -374,13 +398,9 @@ header #navbar ul li:not(#media li):hover::after {
     color: #C76652
 }
 
-#main2 #choose #about-me {
-    margin-right: 0px;
-}
-
 #main2 #choose #about-me div {
-    /* right: 10%; */
     left: 25%;
+    margin-right: 0px;
 }
 
 #main2 #choose #about-me div::after {
@@ -414,15 +434,141 @@ header #navbar ul li:not(#media li):hover::after {
     background-color: #390E2A;
 }
 
-#main3 {
-    height: 400px;
-}
-
 @keyframes title {
     0% {transform: scaleX(0.3)}
     50% {transform: scaleX(1);}
     100% {transform: scaleX(0.3);}
 }
+
+#main3 {
+    display: none;
+    height: fit-content;
+    padding: 0px 0px 50px;
+    background-color: #0B0C0F;
+    overflow: hidden;
+    align-items: center;
+    flex-direction: column;
+    font-family: Outfit;
+    color: white;
+    position: relative;
+}
+
+#main3.open {
+    display: flex;
+}
+
+#main3-sect {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#earthless {
+    color: #B4C4FF;
+    font-size: 2.7rem;
+    margin-top: 70px;
+    width: fit-content;
+    z-index: 50;
+}
+
+#back-elements3 div {
+    position: absolute;
+    color: #808080;
+    animation-duration: 5s;
+    animation-name: gear;
+    animation-timing-function: linear;
+    /* animation-fill-mode: forwards; */
+    animation-iteration-count: infinite;
+    transform: rotate(0);
+    height: fit-content;
+    width: fit-content;
+    z-index: 0;
+    font-size: 200px;
+}
+
+@keyframes gear {
+    from {transform: rotate(0);}
+    to {transform: rotate(360deg);}
+}
+
+#back-elements3 div:first-of-type {
+    top: -80px;
+    left: -60px;
+}
+
+#jakub {
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    max-width: 320px;
+    padding: 10px;
+}
+
+#jakub img {
+    width: 100%;
+    border-radius: 25px;
+    
+}
+
+#jakub h1 {
+    color: white;
+    font-size: 2.5rem;
+    margin: 10px 0px 0px;
+    font-weight: 600;
+}
+
+#jakub h2 {
+    font-size: 1rem;
+    margin: 0px;
+    font-weight: 300;
+}
+
+#earthless-link {
+    width: 100%;
+}
+
+#earthless-link p {
+    margin: 40px 0px 10px 50px;
+}
+
+#earthless-link a {
+    text-decoration: none;
+    color: white
+}
+
+#earthless-link h1 {
+    border: 2px solid white;
+    padding: 5px 10px;
+    border-radius: 25px;
+    margin: 0px;
+    text-transform: uppercase;
+    display: flex;
+    letter-spacing: 10px;
+    font-size: 35px;
+    justify-content: center;
+}
+
+.hidden {
+    opacity: 0;
+    transform: translateX(100px);
+    filter: blur(10px);
+    transition: 0.5s 0.3s ease;
+}
+
+.hiddenL {
+    opacity: 0;
+    transform: translateX(-100px);
+    filter: blur(10px);
+    transition: 0.5s 0.1s ease;
+}
+
+.seen:not(#back-elements3) {
+    transform: translateY(0);
+    opacity: 1;
+    filter: blur(0px);
+}
+
 
 @media only screen and (min-width: 700px) {
     header #navbar {
@@ -457,7 +603,7 @@ header #navbar ul li:not(#media li):hover::after {
     }
     
     #main2-cont {
-        height: calc(100vh - 88px);
+        height: calc(100vh - 75px);
     }
 
     /* #main2 #choose #about-me */
@@ -574,6 +720,11 @@ header #navbar ul li:not(#media li):hover::after {
 
     .both {
         max-width: 1100px;
+    }
+
+    .body1.open header .both {
+        justify-content: space-between;
+        padding: 0px 30px;
     }
     
     #choose {

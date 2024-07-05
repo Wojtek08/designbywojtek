@@ -136,7 +136,7 @@ header h1 {
     height: 230px;
     z-index: -20;
     background: rgb(255,235,87);
-    background: linear-gradient(270deg, rgba(255,235,87,1) 0%, rgba(170,134,27,1) 100%); 
+    background: linear-gradient(270deg, rgb(255, 240, 124) 0%, rgba(170,134,27,1) 100%); 
     position: absolute;
     right: -100%;
     top: 20%;
