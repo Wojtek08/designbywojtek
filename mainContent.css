@@ -243,6 +243,7 @@ header #navbar ul li:not(#media li):hover::after {
 
 #main2.open {
     display: flex;
+    scroll-behavior: smooth;
 }
 
 #back-elements2 {
@@ -450,7 +451,6 @@ header #navbar ul li:not(#media li):hover::after {
     flex-direction: column;
     font-family: Outfit;
     color: white;
-    position: relative;
 }
 
 #main3.open {
@@ -461,6 +461,7 @@ header #navbar ul li:not(#media li):hover::after {
     display: flex;
     align-items: center;
     flex-direction: column;
+    position: relative;
 }
 
 #earthless {
@@ -493,7 +494,12 @@ header #navbar ul li:not(#media li):hover::after {
 
 #back-elements3 div:first-of-type {
     top: -80px;
-    left: -60px;
+    left: -100px;
+}
+
+#back-elements3 div:nth-of-type(2) {
+    right: -100px;
+    top: 400px
 }
 
 #jakub {
@@ -503,12 +509,12 @@ header #navbar ul li:not(#media li):hover::after {
     flex-direction: column;
     max-width: 320px;
     padding: 10px;
+    z-index: 130;
 }
 
 #jakub img {
     width: 100%;
     border-radius: 25px;
-    
 }
 
 #jakub h1 {
@@ -539,15 +545,18 @@ header #navbar ul li:not(#media li):hover::after {
 
 #earthless-link h1 {
     border: 2px solid white;
-    padding: 5px 10px;
+    padding: 5px 10px 5px 15px;
     border-radius: 25px;
     margin: 0px;
     text-transform: uppercase;
     display: flex;
     letter-spacing: 10px;
     font-size: 35px;
+    font-weight: 400;
     justify-content: center;
 }
+
+
 
 .hidden {
     opacity: 0;
@@ -567,6 +576,102 @@ header #navbar ul li:not(#media li):hover::after {
     transform: translateY(0);
     opacity: 1;
     filter: blur(0px);
+}
+
+#planets {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    background-color: #35295970;
+    z-index: 130;
+    margin-top: 50px;
+    max-width: 600px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#planets-cont {
+    height: 100%;
+    width: 40%;
+    position: relative;
+}
+
+#planets-gallery {
+    width: 100%;
+    bottom: 30%;
+    padding: 0px 10px;
+    transform: translateY(0px);
+    position: relative;
+    display: flex;
+    /* gap: 10px; */
+    justify-content: center;
+    flex-direction: column;
+    transition: bottom 0.2s ease;
+}
+
+#planets-gallery img {
+    width: 100%;
+    border-radius: 25px;
+}
+
+#planets-cont section:last-of-type {
+    height: 100%;
+    width: fit-content;
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+}
+
+#planets-cont section i {
+    left: 30%;
+    transform: translateX(-50%);
+    font-size: 25px;
+    border-radius: 50%;
+    padding: 5px;
+    font-size: 30px;
+    color: #bbbbbbe5;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+#planets-cont section i:first-of-type {
+    bottom: 20px;
+    transform: rotate(180deg);
+}
+
+#planets-cont section i:last-of-type {
+    top: 20px;
+    transform: translateX(0px);
+}
+
+#planets #text {
+    width: 60%;
+}
+
+#home {
+    transform: scale(0);
+    position: fixed;
+    bottom: 10px;
+    right: 20px;
+    font-size: 40px;
+    transition: 0.2s ease;
+    z-index: 130;
+}
+
+#home a {
+    text-decoration: none;
+    color: #B03E45;
+}
+
+#home.scrolled {
+    transform: scale(1);
 }
 
 

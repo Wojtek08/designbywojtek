@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="mainContent.css">
     <title>Document</title>
 </head>
-<body class="body1">
+<body class="body1" id="top">
     <section id="container">
         <section id="loading">
         </section>
@@ -26,7 +26,7 @@
                         <li><a href="">Nauka Webdesignu</a></li>
                         <li><a href="">Kontakt</a></li>
                         <ul id="media">
-                            <li><a href="https://www.instagram.com/kaczek_photo"><i class="fa-brands fa-instagram"></a></i></li>
+                            <li><a href="https://www.instagram.com/kaczek_photo" target="_blank"><i class="fa-brands fa-instagram"></a></i></li>
                             <li><a href="mailto:woj-maz1401@o2.pl"><i class="fa-solid fa-envelope"></i></a></li>
                         </ul>
                     </ul>
@@ -99,9 +99,31 @@
                     <h1>Jakub</h1>
                     <h2>Główna Postać</h2>
                 </section>
+                <section id="planets">
+                    <section id="planets-cont">
+                        <section id="planets-gallery">
+                            <div>
+                                <img src="planet3.jpg">
+                            </div>
+                            <div>
+                                <img src="planet1.jpg">
+                            </div>
+                            <div>
+                                <img src="planet2.jpg">
+                            </div>
+                        </section>
+                        <section>
+                            <i class="fa-solid fa-circle-chevron-up"></i>
+                            <i class="fa-solid fa-circle-chevron-up"></i>
+                        </section>
+                    </section>
+                    <section id="text">
+                        <p>Gra <span>Earthless</span> to projekt który stworzyliśmy grupowo podczas udziału w ogólnopolskim konkursie "GEEK".</p>
+                    </section>
+                </section>
                 <section id="earthless-link">
-                    <p>Link:</p>
-                    <a href=""><h1>Earthless</h1></a>
+                    <p class="hiddenL">Link:</p>
+                    <a href="https://wojtek08.github.io/testEarthless/" target="_blank"><h1 class="hidden">Earthless</h1></a>
                 </section>
                 <section id="back-elements3" class="seen">
                     <div>
@@ -117,6 +139,9 @@
             </section>
         </main>
     </section>
+    <div id="home">
+        <a href="#top"><i class="fa-solid fa-circle-arrow-up"></i></a>
+    </div>
     <script src="app.js"></script>
 </body>
 </html>
