@@ -103,17 +103,16 @@ function scrollPlanets() {
     let curImg = 1
 
     chevron1.addEventListener("click", function() {
-        let img1 = document.querySelector()
         switch(curImg) {
             case 1:
                 chevron1.style.setProperty("opacity", "0.3");
-                console.log(curImg)
+                planetsGal.className = "zero"
                 curImg = 0;
                 break;
             case 2:
                 chevron2.style.setProperty("opacity", "1");
+                planetsGal.className = "first"
                 curImg = 1;
-                console.log(curImg)
                 break;                
         }
     })
@@ -122,13 +121,13 @@ function scrollPlanets() {
         switch(curImg) {
             case 0:
                 chevron1.style.setProperty("opacity", "1");
-                console.log(curImg)
+                planetsGal.className = "first"
                 curImg = 1;
                 break;
             case 1:
                 chevron2.style.setProperty("opacity", "0.3");
+                planetsGal.className = "second"
                 curImg = 2;
-                console.log(curImg)
                 break;
         }
     })
