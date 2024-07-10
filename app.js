@@ -4,6 +4,7 @@ let menuBtn = document.getElementById("menu-btn");
 let menu = document.getElementById("navbar");
 let main2 = document.getElementById("main2");
 let main3 = document.getElementById("main3");
+let main4 = document.getElementById("main4");
 let box = document.getElementById("box");
 let planetsGallery = document.getElementById("planets-gallery")
 
@@ -40,6 +41,7 @@ function mainSite() {
     menu.classList.remove("closed")
     main2.classList.add("open")
     main3.classList.add("open")
+    main4.classList.add("open")
 }
 
 nextBtn.addEventListener("click", function() {
@@ -74,8 +76,11 @@ let observer = new IntersectionObserver((entries) => {
 
 const hiddenELements = document.querySelectorAll(".hidden");
 const hiddenELementsL = document.querySelectorAll(".hiddenL");
+const hiddenELementsB = document.querySelectorAll(".hiddenB");
+
 hiddenELements.forEach((el) => observer.observe(el));
 hiddenELementsL.forEach((el) => observer.observe(el));
+hiddenELementsB.forEach((el) => observer.observe(el));
 
 document.addEventListener('scroll', function() {
     let scrollTop = window.scrollY;
